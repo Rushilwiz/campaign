@@ -1,0 +1,75 @@
+@mixin mobile
+  @media (max-width: 786px)
+    @content
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  overflow-x: hidden
+
+.seal
+  width: 100px
+  height: 100px
+  z-index: 999
+  position: fixed
+  right: 0
+  margin-right: 15px
+  margin-top: 15px
+  
+  &::before
+    animation: spin 20s 10s infinite
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: url('/res/seal.png')
+    background-size: cover
+  
+  @include mobile
+    display: none
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+
+
+section
+  height: 100vh
+  width: 100vw
+  display: flex
+  z-index: 1
+
+.landing
+  align-items: flex-start
+  justify-content: center
+  flex-direction: column
+  padding-left: 5vw
+  font-size: 4rem
+  font-family: "Cooper Black", "Arial Black", sans-serif
+  color: #DA3252
+  line-height: 1
+  background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52) 50%, rgba(255, 255, 255, 0)), url("/res/banner.png")
+  text-shadow: 3px 3px #000
+
+  @include mobile
+    padding-left: 0
+    font-size: 2rem
+    text-align: center
+    align-items: center
+    background: rgba(245, 246, 252, 0.52)
+
+.subtitle
+  color: #5d8db9
+  font-family: "Fugaz One", cursive
+
+    
+ 
+    
+    

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.seal {
+  width: 100px;
+  height: 100px;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.seal::before {
+  -webkit-animation: spin 20s 10s infinite;
+          animation: spin 20s 10s infinite;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/res/seal.png");
+  background-size: cover;
+}
+
+@media (max-width: 786px) {
+  .seal {
+    display: none;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+.landing {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5vw;
+  font-size: 4rem;
+  font-family: "Cooper Black", "Arial Black", sans-serif;
+  color: #DA3252;
+  line-height: 1;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(245, 246, 252, 0.52)), to(rgba(255, 255, 255, 0))), url("/res/banner.png");
+  background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52) 50%, rgba(255, 255, 255, 0)), url("/res/banner.png");
+  text-shadow: 3px 3px #000;
+}
+
+@media (max-width: 786px) {
+  .landing {
+    padding-left: 0;
+    font-size: 2rem;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(245, 246, 252, 0.52);
+  }
+}
+
+.subtitle {
+  color: #5d8db9;
+  font-family: "Fugaz One", cursive;
+}
+/*# sourceMappingURL=style.css.map */
