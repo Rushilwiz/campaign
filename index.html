@@ -8,13 +8,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="seal"></div>
-    <section class="landing">
-        <h1>Rushil<br>Umaretiya<br></h1>
-        <p class="subtitle">for sga president</p>
-    </section>
-    <!-- <section class="about">
+    <nav>
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="https://bit.ly/ru4uplatform" target="_blank">platform</a></li>
+        <li><a href="#about">about</a></li>
+    </ul>
+    </nav>
 
-    </section> -->
+    <div class="seal"></div>
+    <section id="landing">
+    <h1>Rushil<br>Umaretiya<br></h1>
+    <p class="subtitle">for sga president</p>
+    </section>
+    <section id="about">
+        <div class="row">
+            <div class="caption">
+                <h1>experience</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolore rem perspiciatis beatae voluptates, temporibus error possimus, quis labore architecto delectus dignissimos nemo sequi nam quo, repudiandae mollitia saepe. Maiores.</p>
+            </div>
+            <div class="img" id="experience"></div>
+        </div>
+        <div class="row">
+            <div class="img" id="initatives"></div>
+            <div class="caption">
+                <h1>initiatives</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolore rem perspiciatis beatae voluptates, temporibus error possimus, quis labore architecto delectus dignissimos nemo sequi nam quo, repudiandae mollitia saepe. Maiores.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="caption">
+                <h1>community</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolore rem perspiciatis beatae voluptates, temporibus error possimus, quis labore architecto delectus dignissimos nemo sequi nam quo, repudiandae mollitia saepe. Maiores.</p>
+            </div>
+            <div class="img" id="community"></div>
+        </div>
+    </section>
+    <section id="cta">
+        <h1>Are you for you?</h1>
+        <h2>I am.</h2>
+        <p>vote rushil umaretiya for sga president</p>
+    </section>
+
+    <script>
+        const cta = document.querySelector('#cta');
+        cta.addEventListener('click', () => {
+            window.location.href = 'https://ion.tjhsst.edu/polls';
+        });
+    </script>
 </body>
 </html>

@@ -2,7 +2,31 @@
   @media (max-width: 786px)
     @content
 
-
+nav
+  width: 100vw
+  height: 8vh
+  display: flex
+  position: fixed
+  align-items: center
+  justify-content: space-around
+  z-index: 999
+  
+  ul
+    width: 60%
+    display: flex
+    align-items: center
+    justify-content: space-around
+    list-style: none
+    
+    li a
+      font-family: 'Poppins', sans-serif
+      font-size: 1.2rem
+      color: black
+      text-decoration: none
+      
+      &:hover
+        font-weight: bold
+      
 *
   margin: 0
   padding: 0
@@ -38,15 +62,13 @@ body
   to
     transform: rotate(360deg)
 
-
-
 section
   height: 100vh
   width: 100vw
   display: flex
   z-index: 1
 
-.landing
+#landing
   align-items: flex-start
   justify-content: center
   flex-direction: column
@@ -69,7 +91,88 @@ section
   color: #5d8db9
   font-family: "Fugaz One", cursive
 
+#about
+  display: flex
+  position: relative
+  flex-direction: column
+  padding: 5vw 5vh 0 5vw
+  height: auto
+
+  .row
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-bottom: 5vh
+
+    .caption
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 50%
+      padding: 0 5vw
+
+      h1
+        font-family: "Fugaz One", cursive
+        font-size: 4rem
+        color: #DA3252
+        line-height: 1
+        margin-bottom: 5vh
+
+      p
+        font-family: "Poppins", sans-serif
+        font-size: 1.5rem
+        color: #5d8db9
+        line-height: 1.5
+        margin-bottom: 5vh
+      
+    .img
+      width: 100%
+      height: 50vh
+
+    #experience
+      background-image: url("/res/experience.jpeg")
     
- 
+    #initatives
+      background-image: url("/res/initiatives.jpg")
     
+    #community
+      background-image: url("/res/community.jpg")
     
+    @include mobile
+      flex-direction: column-reverse
+  
+#cta
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 30vh
+  background: #FDFD96
+
+  h1
+    font-family: "Cooper Black", cursive
+    font-size: 2rem
+    line-height: 1
+  
+  h2
+    font-family: "Poppins", sans-serif
+    font-size: 6rem
+    color: #000
+    line-height: 1
+    text-decoration: underline
+  
+  p
+    font-family: "Cooper Black", sans-serif
+    font-size: 1.5rem
+    color: #4b4b4b 
+    line-height: 4
+
+  &:hover
+    cursor: pointer
+    
+    p
+      color: #DA3252
